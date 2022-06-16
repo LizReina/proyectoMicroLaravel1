@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Linea;
+
 class LineaSeeder extends Seeder
 {
     /**
@@ -27,7 +28,7 @@ class LineaSeeder extends Seeder
             'nombre' => 'Línea 5',
             'tipo' => null,
         ]);
-     
+
         Linea::create([
             'nombre' => 'Línea 8',
             'tipo' => null,

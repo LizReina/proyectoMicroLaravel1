@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Ruta;
+
 class RutaSeeder extends Seeder
 {
     /**
@@ -106,6 +107,6 @@ class RutaSeeder extends Seeder
             'tipo' => 'vuelta',
             'linea_id'=> 10
         ]);
-       
+
     }
 }

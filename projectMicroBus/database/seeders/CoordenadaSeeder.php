@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Coordenada;
 
 class CoordenadaSeeder extends Seeder
 {
@@ -13,13 +14,7 @@ class CoordenadaSeeder extends Seeder
      * @return void
      */
     public function run()
-    {  //linea 1
-        /// escribir aquiii-.......................
-
-
-       //linea 2 
-         /// escribir aquiii-.......................
-
+    {
         //linea 5
         //ida
         Coordenada::create([
@@ -47,7 +42,7 @@ class CoordenadaSeeder extends Seeder
         //linea 8
         /// escribir aquiii-.......................
 
-       //linea 9 
+       //linea 9
          /// escribir aquiii-.......................
 
         //linea 10
