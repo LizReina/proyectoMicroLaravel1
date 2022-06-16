@@ -19,5 +19,8 @@ class Coordenada extends Model
     public function ruta() {
         return $this->belongsTo(Ruta::class, 'ruta_id');
     }
-   
+
+    public function getCoordenadasxLineas($ruta) {
+        return $this->where(['ruta_id' => $ruta])->get();
+    }
 }

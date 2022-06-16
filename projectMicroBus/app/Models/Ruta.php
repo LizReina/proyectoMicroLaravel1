@@ -21,4 +21,8 @@ class Ruta extends Model
     public function coordenada() {
         return $this->hasMany(Coordenada::class, 'ruta_id');
     }
+
+    public function getRutas() {
+        return $this->orderBy('id', 'ASC')->get();
+    }
 }
