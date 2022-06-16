@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Coordenada;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -48,11 +49,55 @@ class CoordenadaSeeder extends Seeder
         /// escribir aquiii-.......................
 
        //linea 9 
-         /// escribir aquiii-.......................
+        //ida
+        Coordenada::create([
+            'latitud' => -17.7971488,
+            'longitud' => -63.1209096,
+            'ruta_id' => 1
+        ]);
 
+        Coordenada::create([
+            'latitud' => -17.771331,
+            'longitud' => -63.2089857,
+            'ruta_id' => 1
+        ]);
+        //vuelta
+        Coordenada::create([
+            'latitud' => -17.7714495,
+            'longitud' => -63.2090742,
+            'ruta_id' => 2
+        ]);
+
+        Coordenada::create([
+            'latitud' => -17.8037553,
+            'longitud' => -63.0890912,
+            'ruta_id' => 2
+        ]);
         //linea 10
-        /// escribir aquiii-.......................
+        //ida
+        Coordenada::create([
+            'latitud' => -17.810668,
+            'longitud' => -63.1191503,
+            'ruta_id' => 1
+        ]);
 
+        Coordenada::create([
+            'latitud' => -17.7148167,
+            'longitud' => -63.1690811,
+            'ruta_id' => 1
+        ]);
+        //vuelta
+        Coordenada::create([
+            'latitud' => -17.810668,
+            'longitud' => -63.1191503,
+            'ruta_id' => 2
+        ]);
+
+        Coordenada::create([
+            'latitud' => -17.7147715,
+            'longitud' => -63.1691397,
+            'ruta_id' => 2
+        ]);
 
        //linea 11
          /// escribir aquiii-.......................
