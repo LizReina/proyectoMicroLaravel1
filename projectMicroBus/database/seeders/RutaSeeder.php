@@ -90,21 +90,21 @@ class RutaSeeder extends Seeder
         ]);
         Ruta::create([
             'tipo' => 'ida',
-            'linea_id'=> 9
+            'linea_id'=> 9 
         ]);
 
         Ruta::create([
             'tipo' => 'vuelta',
-            'linea_id'=> 9
+            'linea_id'=> 9  
         ]);
         Ruta::create([
             'tipo' => 'ida',
-            'linea_id'=> 10
+            'linea_id'=> 10 
         ]);
 
         Ruta::create([
             'tipo' => 'vuelta',
-            'linea_id'=> 10
+            'linea_id'=> 10 
         ]);
        
     }

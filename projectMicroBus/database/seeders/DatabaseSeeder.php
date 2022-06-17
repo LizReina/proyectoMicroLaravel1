@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Linea;
 use App\Models\Ruta;
+use App\Models\Coordenada;
 
 class DatabaseSeeder extends Seeder
 {
@@ -26,5 +27,9 @@ class DatabaseSeeder extends Seeder
         $this->call(LineaSeeder::class);
         
         $this->call(RutaSeeder::class);
+
+        $this->call(Coordenada17Seeder::class);
+
+        $this->call(Coordenada18Seeder::class);
     }
 }

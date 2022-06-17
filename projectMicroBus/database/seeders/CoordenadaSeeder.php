@@ -14,7 +14,7 @@ class CoordenadaSeeder extends Seeder
      * @return void
      */
     public function run()
-    {  //linea 1
+    { /* //linea 1
         /// escribir aquiii-.......................
 
 
@@ -109,10 +109,32 @@ class CoordenadaSeeder extends Seeder
 
        //linea 17
          /// escribir aquiii-.......................
+        //ida
+        Coordenada::create([
+        'latitud' => -17.810668,
+        'longitud' => -63.1191503,
+        'ruta_id' => 1
+        ]);
 
+        Coordenada::create([
+        'latitud' => -17.7148167,
+        'longitud' => -63.1690811,
+        'ruta_id' => 1
+        ]);
         //linea 18
         /// escribir aquiii-.......................
+         //vuelta
+         Coordenada::create([
+            'latitud' => -17.810668,
+            'longitud' => -63.1191503,
+            'ruta_id' => 2
+        ]);
 
-
+        Coordenada::create([
+            'latitud' => -17.7147715,
+            'longitud' => -63.1691397,
+            'ruta_id' => 2
+        ]);
+*/
     }
 }
