@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Coordenada;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Coordenada;
 
 class CoordenadaSeeder extends Seeder
 {
@@ -14,13 +15,7 @@ class CoordenadaSeeder extends Seeder
      * @return void
      */
     public function run()
-    {  //linea 1
-        /// escribir aquiii-.......................
-
-
-       //linea 2 
-         /// escribir aquiii-.......................
-
+    {
         //linea 5
         //ida
         Coordenada::create([
@@ -67,6 +62,7 @@ class CoordenadaSeeder extends Seeder
             'longitud' => -63.2090742,
             'ruta_id' => 2
         ]);
+
 
         Coordenada::create([
             'latitud' => -17.8037553,

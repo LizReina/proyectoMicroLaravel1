@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('lineas', [App\Http\Controllers\API\LineaController::class, 'getLineas']);
+Route::get('lineas/rutas', [App\Http\Controllers\API\LineaController::class, 'getLineasRutas']);
+Route::post('ruta/{ruta}', [App\Http\Controllers\API\LineaController::class, 'getCoordenadasxRuta']);
+Route::post('lineas/{linea}', [App\Http\Controllers\API\LineaController::class, 'getCoordenadasxLinea']);
