@@ -28,5 +28,7 @@ class DatabaseSeeder extends Seeder
         $this->call(RutaSeeder::class);
         $this->call(PuntosL1Seeder::class);
         $this->call(PuntosL2Seeder::class);
+        $this->call(Coordenada17Seeder::class);
+        $this->call(Coordenada18Seeder::class);
     }
 }
