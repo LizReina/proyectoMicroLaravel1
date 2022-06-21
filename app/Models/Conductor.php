@@ -16,10 +16,11 @@ class Conductor extends Model
         'telefono',
         'email',
         'categoria_lic',
-        'foto'
+        'foto',
+        'users_id'
     ];
 
-    public function microbus() {
-        return $this->belongsTo(microbus::class, 'microbus_id');
+    public function user() {
+        return $this->belongsTo(User::class, 'users_id');
     }
 }

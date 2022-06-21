@@ -23,6 +23,12 @@ return new class extends Migration
             $table->string('categoria_lic');
             $table->string('foto');
 
+            $table->unsignedBigInteger('users_id');
+            $table->softDeletes();
+
+
+            $table->foreign('users_id')->on('users')->references('id')
+            ->onDelete('cascade');
         });
     }
 
