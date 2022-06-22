@@ -13,7 +13,7 @@ use App\Models\Microbus;
 
 class MicrobusController extends Controller
 {
-    public function register(Request $request)
+    public function createBus(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'placa'=> 'required',
