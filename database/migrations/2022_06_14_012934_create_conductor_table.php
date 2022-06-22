@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('conductor', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('nombre');
+            $table->string('nombre')->nullable();
             $table->dateTime('fecha_nacimiento')->default(date("Y-m-d H:i:s"));
             $table->string('ci')->nullable();
             $table->integer('telefono')->nullable();

@@ -25,6 +25,10 @@ Route::group([
         Route::post('me', 'App\Http\Controllers\AuthAuthController@me');
 
         Route::post('UserConductor', 'App\Http\Controllers\ConductorController@register');
+<<<<<<< HEAD
         Route::post('createBus', 'App\Http\Controllers\MicrobusController@createBus');
+=======
+        Route::post('MicrobusPerfil', 'App\Http\Controllers\MicrobusController@register');
+>>>>>>> 6e932152755a4ce34d4e5e9521dc7e67edc165ec
     }
 );
