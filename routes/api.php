@@ -24,6 +24,6 @@ Route::group([
         Route::post('refresh', 'App\Http\Controllers\AuthAuthController@refresh');
         Route::post('me', 'App\Http\Controllers\AuthAuthController@me');
 
-        Route::post('/UserConductor', 'App\Http\Controllers\ConductorController@register');
+        Route::post('UserConductor', 'App\Http\Controllers\ConductorController@register');
     }
 );
