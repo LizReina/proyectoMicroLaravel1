@@ -15,20 +15,22 @@ return new class extends Migration
     {
         Schema::create('microbus', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('foto')->nullable();
-            $table->string('placa');
+            $table->string('placa')->unique();
             $table->string('modelo')->nullable();
             $table->integer('nro_asientos')->nullable();
-            $table->integer('nro_linea')->nullable();
             $table->integer('nroInterno');
-            $table->date('fecha_asignacion');
-            $table->date('fecha_baja');
+            $table->date('fecha_asignacion')->nullable();
+            $table->date('fecha_baja')->nullable();
             $table->unsignedBigInteger('conductor_id');
+            $table->unsignedBigInteger('linea_id');
+            $table->timestamps();
+
             $table->softDeletes();
 
-
             $table->foreign('conductor_id')->on('conductor')->references('id')
+            ->onDelete('cascade');
+            $table->foreign('linea_id')->on('linea')->references('id')
             ->onDelete('cascade');
         });
     }

@@ -11,8 +11,8 @@ class Conductor extends Model
     protected $table = 'conductor';
     protected $fillable = [
         'nombre',
-        'fecha_nacimiento',
         'ci',
+        'fecha_nacimiento',
         'telefono',
         'categoria_lic',
         'foto',
@@ -21,5 +21,9 @@ class Conductor extends Model
 
     public function user() {
         return $this->belongsTo(User::class, 'users_id');
+    }
+
+    public function micro() {
+        return $this->hasOne(Microbus::class, 'conductor_id');
     }
 }

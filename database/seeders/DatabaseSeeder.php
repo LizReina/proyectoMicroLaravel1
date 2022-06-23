@@ -24,7 +24,6 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call(LineaSeeder::class);
-        
         $this->call(RutaSeeder::class);
     }
 }

@@ -12,15 +12,14 @@ class Linea extends Model
     protected $fillable = [
         'nombre',
         'tipo',
-        'microbus_id'
     ];
-
 
     public function ruta() {
         return $this->hasMany(Ruta::class, 'linea_id');
     }
+
     public function microbus() {
-        return $this->hasMany(microbus::class, 'microbus_id');
+        return $this->hasMany(Microbus::class, 'linea_id');
     }
 
     public function getLineas() {

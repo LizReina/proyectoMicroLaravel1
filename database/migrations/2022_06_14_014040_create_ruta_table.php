@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('ruta', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('tipo')->nullable();
             $table->unsignedBigInteger('linea_id');
+            $table->timestamps();
+
             $table->softDeletes();
 
             $table->foreign('linea_id')->on('linea')->references('id')

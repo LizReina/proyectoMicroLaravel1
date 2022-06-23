@@ -15,17 +15,16 @@ return new class extends Migration
     {
         Schema::create('conductor', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->string('nombre')->nullable();
+            $table->string('nombre');
+            $table->string('ci')->unique();
             $table->dateTime('fecha_nacimiento')->default(date("Y-m-d H:i:s"));
-            $table->string('ci')->nullable();
             $table->integer('telefono')->nullable();
             $table->string('categoria_lic');
             $table->string('foto')->nullable();
-
             $table->unsignedBigInteger('users_id');
-            $table->softDeletes();
+            $table->timestamps();
 
+            $table->softDeletes();
 
             $table->foreign('users_id')->on('users')->references('id')
             ->onDelete('cascade');

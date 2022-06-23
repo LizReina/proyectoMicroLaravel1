@@ -24,9 +24,13 @@ class ConductorController extends Controller
             return response()->json($validator->errors()->toJson(), 400);
         }
 
-        $conductor = Conductor::create(array_merge(
-            $validator->validate(),
-        ));
+        $conductor = Conductor::create(
+            array_merge($validator->validate(),),
+        );
+
+        $conductor->telefono = $request->telefono;
+        $conductor->foto = $request->foto;
+        $conductor->save();
 
         return response()->json([
             'message' => 'Conductor creado',

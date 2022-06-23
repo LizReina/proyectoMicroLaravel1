@@ -23,11 +23,12 @@ class LineaSeeder extends Seeder
             'nombre' => 'Línea 2',
             'tipo' => null,
         ]);
+
         Linea::create([
             'nombre' => 'Línea 5',
             'tipo' => null,
         ]);
-     
+
         Linea::create([
             'nombre' => 'Línea 8',
             'tipo' => null,
@@ -35,20 +36,28 @@ class LineaSeeder extends Seeder
         Linea::create([
             'nombre' => 'Línea 9',
             'tipo' => null,
-        ]); Linea::create([
+        ]);
+
+        Linea::create([
             'nombre' => 'Línea 10',
             'tipo' => null,
-        ]); Linea::create([
+        ]);
+
+        Linea::create([
             'nombre' => 'Línea 11',
             'tipo' => null,
-        ]); Linea::create([
+        ]);
+
+        Linea::create([
             'nombre' => 'Línea 16',
             'tipo' => null,
         ]);
+
         Linea::create([
             'nombre' => 'Línea 17',
             'tipo' => null,
         ]);
+
         Linea::create([
             'nombre' => 'Línea 18',
             'tipo' => null,
