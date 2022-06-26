@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\User;
-
+use App\Models\Conductor;
 
 class AuthController extends Controller
 {
@@ -38,9 +38,11 @@ class AuthController extends Controller
             return response()->json(['error' => 'Unauthorized'], 401);
         } else {
             $user = auth()->user();
+            $conductor = Conductor::where(['users_id' => $user->id])->first();
             $response = [
                 'success' => true,
                 'user' => $user,
+                'conductor' => $conductor,
                 'token' => $token
             ];
         }
