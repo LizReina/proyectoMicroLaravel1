@@ -15,16 +15,17 @@ return new class extends Migration
     {
         Schema::create('coordenada', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->double('longitud');
             $table->double('latitud');
             $table->unsignedBigInteger('ruta_id');
+            $table->timestamps();
+
             $table->softDeletes();
 
             $table->foreign('ruta_id')->on('ruta')->references('id')
                 ->onDelete('cascade');
         });
-       
+
     }
 
     /**

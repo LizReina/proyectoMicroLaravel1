@@ -19,17 +19,23 @@ class MicrobusController extends Controller
             'placa'=> 'required',
             'nroInterno' => 'required',
             'fecha_asignacion' => 'required|date',
-            'fecha_baja' => 'required|date',
-            'conductor_id' => 'required'
+            'conductor_id' => 'required',
+            'linea_id' => 'required'
         ]);
 
         if ($validator->fails()) {
             return response()->json($validator->errors()->toJson(), 400);
         }
 
-        $microbus = Microbus::create(array_merge(
-            $validator->validate(),
-        ));
+        $microbus = Microbus::create(
+            array_merge($validator->validate(),),
+        );
+
+        $microbus->foto = $request->foto;
+        $microbus->modelo = $request->modelo;
+        $microbus->nro_asientos = $request->nro_asientos;
+        $microbus->fecha_baja = $request->fecha_baja;
+        $microbus->save();
 
         return response()->json([
             'message' => 'Microbus creado',

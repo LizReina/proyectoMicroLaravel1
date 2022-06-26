@@ -42,8 +42,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
     public function conductor() {
         return $this->hasOne(Conductor::class, 'users_id');
     }
-
 }

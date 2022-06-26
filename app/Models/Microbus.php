@@ -19,10 +19,15 @@ class Microbus extends Model
         'nroInterno',
         'fecha_asignacion',
         'fecha_baja',
-        'conductor_id'
+        'conductor_id',
+        'linea_id'
     ];
 
     public function conductor() {
-        return $this->belongsTo(conductor::class, 'conductor_id');
+        return $this->belongsTo(Conductor::class, 'conductor_id');
+    }
+
+    public function linea() {
+        return $this->belongsTo(Linea::class, 'linea_id');
     }
 }
