@@ -30,4 +30,8 @@ class Microbus extends Model
     public function linea() {
         return $this->belongsTo(Linea::class, 'linea_id');
     }
+
+    public function getBus($bus) {
+        return $this->where(['conductor_id' => $bus])->first();
+    }
 }

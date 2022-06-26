@@ -28,3 +28,6 @@ Route::group([
         Route::post('MicrobusPerfil', 'App\Http\Controllers\MicrobusController@register');
     }
 );
+
+Route::get('lineas', 'App\Http\Controllers\MicrobusController@getLineasAll');
+Route::get('getBus/{conductor}', 'App\Http\Controllers\MicrobusController@getBus');
