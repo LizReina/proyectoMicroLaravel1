@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('ci')->unique();
-            $table->dateTime('fecha_nacimiento')->default(date("Y-m-d H:i:s"));
+            $table->string('fecha_nacimiento')->nullable();
             $table->integer('telefono')->nullable();
             $table->string('categoria_lic');
             $table->string('foto')->nullable();
