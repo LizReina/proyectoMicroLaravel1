@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('modelo')->nullable();
             $table->integer('nro_asientos')->nullable();
             $table->integer('nroInterno');
-            $table->date('fecha_asignacion')->nullable();
-            $table->date('fecha_baja')->nullable();
+            $table->string('fecha_asignacion')->nullable();
+            $table->string('fecha_baja')->nullable();
             $table->unsignedBigInteger('conductor_id');
             $table->unsignedBigInteger('linea_id');
             $table->timestamps();
