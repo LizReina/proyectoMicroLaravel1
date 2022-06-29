@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Validator;
 use App\Models\Microbus;
 use App\Models\Linea;
 use App\Models\Conductor;
+use Illuminate\Support\Facades\Storage;
 
 class MicrobusController extends Controller
 {
@@ -32,10 +33,16 @@ class MicrobusController extends Controller
             array_merge($validator->validate(),),
         );
 
-        $microbus->foto = $request->foto;
         $microbus->modelo = $request->modelo;
         $microbus->nro_asientos = $request->nro_asientos;
         $microbus->fecha_baja = $request->fecha_baja;
+        $image = $request->foto;
+        $image = str_replace('data:image/png;base64,','', $image);
+        $image = str_replace(' ', '+', $image);
+        $imageName = time().'-micro'.$microbus->conductor_id.'.png';
+        \File::put(public_path('/img/' . $imageName), base64_decode($image));
+        $url = '/public/img/' . $imageName;
+        $microbus->foto = $url;
         $microbus->save();
 
         return response()->json([
@@ -64,6 +71,7 @@ class MicrobusController extends Controller
         $microbus->modelo = $bus->modelo;
         $microbus->nroInterno = $bus->nroInterno;
         $microbus->nro_asientos = $bus->nro_asientos;
+        $microbus->foto = $bus->foto;
         $microbus->linea = $linea->nombre;
         $microbus->conductor = $conductor->nombre;
 

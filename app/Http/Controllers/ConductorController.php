@@ -29,7 +29,12 @@ class ConductorController extends Controller
         );
 
         $conductor->telefono = $request->telefono;
-        $conductor->foto = $request->foto;
+        $image = $request->foto;
+        $image = str_replace('data:image/png;base64,','', $image);
+        $image = str_replace(' ', '+', $image);
+        $imageName = time().'user'.$conductor->users_id.'.png';
+        \File::put(public_path('/img/' . $imageName), base64_decode($image));
+        $conductor->foto = $imageName;
         $conductor->save();
 
         return response()->json([
